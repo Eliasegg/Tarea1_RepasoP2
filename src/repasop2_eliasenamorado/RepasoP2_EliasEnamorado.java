@@ -16,6 +16,14 @@ public class RepasoP2_EliasEnamorado {
         System.out.println("Decimal a binario: " + Recursividad.decimalABinario(13));
         System.out.println("Maximo comun divisor: " + Recursividad.mcd(48, 18));
         System.out.println("6to término de Fibonacci: " + Recursividad.fibonacci(6));
+        int[] arreglo = {2, 3, 4, 10, 40};
+        int objetivo = 10;
+        int resultado = Recursividad.busquedaBinaria(arreglo, 0, arreglo.length - 1, objetivo);
+        if (resultado == -1) {
+            System.out.println("Elemento no presente en el arreglo");
+        } else {
+            System.out.println("Elemento encontrado en el índice: " + resultado);
+        }
         
         Inventario inventario = new Inventario();
         String[] opciones = {"Agregar", "Listar", "Modificar", "Eliminar", "Vehículo más antiguo", "Vehículos de color rojo", "Diferencia de años entre 2 vehículos", "Salir"};

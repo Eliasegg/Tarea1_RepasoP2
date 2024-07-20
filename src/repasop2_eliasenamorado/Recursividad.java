@@ -15,7 +15,6 @@ public class Recursividad {
         return decimalABinario(numero / 2) + (numero % 2);
     }
     
-    
     // Idea principal es ir dividiendo el número mayor entre el menor y quedarse con el resto (Algoritmo de Euclides)
     // El caso base es cuando el segundo número es 0
     public static int mcd(int num1, int num2) {
@@ -35,4 +34,25 @@ public class Recursividad {
         return fibonacci(numero - 1) + fibonacci(numero - 2);
     }
 
+    // Se divide el array a la mitad en cada llamada y buscar en la mitad correspondiente
+    public static int busquedaBinaria(int[] arreglo, int izquierda, int derecha, int objetivo) {
+        if (izquierda > derecha) {
+            return -1;
+        }
+        
+        int medio = izquierda + (derecha - izquierda) / 2;
+
+        if (arreglo[medio] == objetivo) {
+            return medio;
+        }
+        
+        // Buscar a la derecha
+        if (arreglo[medio] > objetivo) {
+            return busquedaBinaria(arreglo, izquierda, medio - 1, objetivo);
+        }
+
+        // Buscar a la izquierda
+        return busquedaBinaria(arreglo, medio + 1, derecha, objetivo);
+    }
+    
 }
