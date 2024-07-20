@@ -15,6 +15,7 @@ public class RepasoP2_EliasEnamorado {
     public static void main(String[] args) {
         System.out.println("Decimal a binario: " + Recursividad.decimalABinario(13));
         System.out.println("Maximo comun divisor: " + Recursividad.mcd(48, 18));
+        System.out.println("6to término de Fibonacci: " + Recursividad.fibonacci(6));
         
         Inventario inventario = new Inventario();
         String[] opciones = {"Agregar", "Listar", "Modificar", "Eliminar", "Vehículo más antiguo", "Vehículos de color rojo", "Diferencia de años entre 2 vehículos", "Salir"};

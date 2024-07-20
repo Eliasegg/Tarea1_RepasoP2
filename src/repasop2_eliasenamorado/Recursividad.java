@@ -25,5 +25,14 @@ public class Recursividad {
         return mcd(num2, num1 % num2);
     }
     
+    // Según la definición, cada término es la suma de los dos anteriores
+    // Por lo que busqué, el 6to término debe ser 8. Sin embargo esto sucede si no se considera el 0 como primer término.
+    // Por lo tanto, los casos base son los dos primeros términos (0 y 1)
+    public static int fibonacci(int numero) {
+        if (numero <= 1) {
+           return numero;
+        }
+        return fibonacci(numero - 1) + fibonacci(numero - 2);
+    }
 
 }
