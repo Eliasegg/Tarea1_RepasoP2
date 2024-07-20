@@ -12,7 +12,9 @@ public class RepasoP2_EliasEnamorado {
     /**
      * @param args the command line arguments
      */
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        System.out.println("Decimal a binario: " + Recursividad.decimalABinario(13));
+        
         Inventario inventario = new Inventario();
         String[] opciones = {"Agregar", "Listar", "Modificar", "Eliminar", "Vehículo más antiguo", "Vehículos de color rojo", "Diferencia de años entre 2 vehículos", "Salir"};
 
